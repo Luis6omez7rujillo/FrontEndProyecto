@@ -1,0 +1,66 @@
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<script type="text/JavaScript" src="recaptchagoogle.js"></script>
+
+<div class="container col s8">
+    <div class="row">
+      <nav>
+        <div class="nav-wrapper">
+          <div class="col s8">
+            <h3 class="brand-logo col s12">Modificar producto</h3>
+          </div>
+        </div>
+      </nav>
+  
+    </div>
+    <form [formGroup]="fgValidador" (ngSubmit)="EditarProducto()" class="col s14">
+
+      <input type="hidden" formControlName="id" />
+
+      <div class="row">
+        <div class="input-field hoverable col s12">
+          <i class="material-icons prefix">local_offer</i>
+          <input formControlName="nombre" id="nombre" type="text" class="validate">
+          <label class="active" for="nombre">Nombre de producto</label>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="input-field hoverable col s12">
+          <i class="material-icons prefix">monetization_on</i>
+          <input formControlName="precio" id="precio" type="text" class="validate">
+          <label class="active" for="precio">Precio</label>
+        </div>
+
+      </div>
+      
+      <div class="row">
+        <div class="input-field hoverable col s12">
+          <i class="material-icons prefix">wallpaper</i>
+          <input formControlName="imagen" id="imagen" type="text" class="validate">
+          <label class="active" for="imagen">Imagen</label>
+        </div>
+      </div>
+        
+
+      
+      <div class="row">
+        
+               
+        <div class="col-md-12">
+
+            
+         
+            <button [disabled]="!fgValidador.valid" type='submit'  name='btn_login' class="btn waves-effect waves-light ">
+                Actualizar Producto
+                <i class="material-icons right">done</i>
+            </button>
+
+         
+         
+        </div>
+      </div>
+      
+     
+    </form>
+  
+  </div>

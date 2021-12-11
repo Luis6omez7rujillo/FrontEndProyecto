@@ -1,0 +1,45 @@
+<br>
+<a routerLink="/administracion/crear-producto" class="btn">Crear Producto</a>
+<br>
+<table class="table responsive"> 
+    <thead>
+        <tr>
+            <th>
+                NOMBRE
+            </th>
+            <th>
+                PRECIO
+            </th>
+            <th>
+                IMAGEN
+            </th>
+            <th>
+                EDICIÓN
+            </th>
+            <th>
+                ELIMINAR
+            </th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr *ngFor="let p of ListaProductos">
+            <td>
+                {{p.nombre}}
+            </td>
+            <td>
+                {{p.precio}}
+            </td>
+            <td>
+               <img src="{{p.imagen}}" class="imagen_producto" /> 
+            </td>
+            <td>
+                <a routerLink="/administracion/editar-producto/{{p.id}}" class="btn">Editar</a>
+            </td>
+            <td>
+                <a routerLink="/administracion/eliminar-producto/{{p.id}}" class="btn">Eliminar</a>
+            </td>
+
+        </tr>
+    </tbody>
+</table>

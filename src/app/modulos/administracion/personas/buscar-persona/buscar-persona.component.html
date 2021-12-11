@@ -1,0 +1,52 @@
+<br>
+<a routerLink="/administracion/crear-persona" class="btn">Crear Persona</a>
+<br>
+<table class="table responsive"> 
+    <thead>
+        <tr>
+            <th>
+                NOMBRES
+            </th>
+            <th>
+                APELLIDOS
+            </th>
+            <th>
+                CORREO ELECTRÓNICO
+            </th>
+            <th>
+                TELÉFONO MÓVIL
+            </th>
+            <th>
+                EDITAR
+            </th>
+            <th>
+                ELIMINAR
+            </th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr *ngFor="let p of ListaPersonas">
+            <td>
+                {{p.nombres}}
+            </td>
+            <td>
+                {{p.apellidos}}
+            </td>
+            <td>
+                {{p.correo}}
+            </td>
+            <td>
+                {{p.telefono}}
+            </td>
+            <td>
+                <a routerLink="/administracion/editar-persona/{{p.id}}" class="btn">Editar</a>
+            </td>
+            <td>
+                <a routerLink="/administracion/eliminar-persona/{{p.id}}" class="btn">Eliminar</a>
+            </td>
+
+        </tr>
+    </tbody>
+</table>
+

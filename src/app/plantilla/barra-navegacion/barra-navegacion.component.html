@@ -1,0 +1,26 @@
+<nav>
+    <div class="nav-wrapper #212121 grey darken-3">
+      <a routerLink="/inicio" class="brand-logo">Aplicación de Pedidos</a>
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+        
+        <li *ngIf="sesionIniciada"><a routerLink="/inicio">Inicio</a></li>
+    <li *ngIf="sesionIniciada"><a routerLink="/administracion/listar-personas">Persona</a></li>
+    <li *ngIf="sesionIniciada"><a routerLink="/administracion/listar-productos">Productos</a></li>
+    <li *ngIf="!sesionIniciada"><a routerLink="/seguridad/identificacion">Iniciar sesión</a></li>
+    <li *ngIf="sesionIniciada"><a routerLink="/seguridad/cerrar-sesion">Cerrar sesión</a></li>
+    <li *ngIf="sesionIniciada"><a routerLink="/seguridad/recuperacion-clave">Recuperación de contraseña</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <ul class="sidenav" id="mobile-demo">
+    <li *ngIf="sesionIniciada"><a routerLink="/inicio">Inicio</a></li>
+    <li *ngIf="sesionIniciada"><a routerLink="/administracion/listar-personas">Personas</a></li>
+    <li *ngIf="sesionIniciada"><a routerLink="/administracion/listar-productos">Productos</a></li>
+    <li *ngIf="!sesionIniciada"><a routerLink="/seguridad/identificacion">Iniciar sesión</a></li>
+    <li *ngIf="sesionIniciada"><a routerLink="/seguridad/cerrar-sesion">Cerrar sesión</a></li>
+    <li *ngIf="sesionIniciada"><a routerLink="/seguridad/recuperacion-clave">Recuperación de contraseña</a></li>
+    <li><a href="collapsible.html">Javascript</a></li>
+    <li><a href="mobile.html">Mobile</a></li>
+  </ul>
