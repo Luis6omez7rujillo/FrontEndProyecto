@@ -70,12 +70,12 @@ header .textos-header{
 }
 
 .textos-header h1{
-    font-size: 50px;
+    font-size: 100px;
     color: #fff;
 }
 
 .textos-header h2{
-    font-size: 30px;
+    font-size: 60px;
     font-weight: 300;
     color: #fff;
 }
@@ -117,8 +117,8 @@ main .sobre-nosotros{
     border-radius: 50%;
     display: inline-block;
     text-align: center;
-    width: 30px;
-    height: 30px;
+    width: 60px;
+    height: 60px;
     padding: 5px;
     box-shadow: 0 0 6px 0 rgba(0,0,0,.5);
     margin-right: 5px;
@@ -449,4 +449,9 @@ footer{
 
 }
     
+
+
+
+    
+
 
